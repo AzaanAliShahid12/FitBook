@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: fitbook-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: fitbook
+      POSTGRES_PASSWORD: fitbook_password
+      POSTGRES_DB: fitbook
+    ports:
+      - "5432:5432"
+    volumes:
+      - fitbook_pgdata:/var/lib/postgresql/data
+  server:
+    build:
+      context: ./server
+    container_name: fitbook-server
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://fitbook:fitbook_password@db:5432/fitbook
+      PORT: 5000
+    ports:
+      - "5000:5000"
+  client:
+    build:
+      context: ./client
+    container_name: fitbook-client
+    restart: unless-stopped
+    depends_on:
+      - server
+    ports:
+      - "5173:80"
+volumes:
+  fitbook_pgdata:
