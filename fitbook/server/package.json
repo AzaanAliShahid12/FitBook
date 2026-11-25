@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "prisma generate && tsc && tsc prisma/seed.ts --outDir dist --rootDir prisma --module commonjs --target ES2022 --moduleResolution node --esModuleInterop --skipLibCheck",
+    "build": "prisma generate && tsc",
     "start": "prisma db push && node dist/index.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
@@ -14,8 +14,7 @@
     "seed": "tsx prisma/seed.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "start:node": "node dist/index.js",
-    "seed:prod": "node dist/seed.js"
+    "start:node": "node dist/index.js"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
