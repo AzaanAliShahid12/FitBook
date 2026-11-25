@@ -4,6 +4,10 @@ A production-quality, full-stack fitness class booking platform for gyms, fitnes
 
 Members browse classes with **live seat availability**, book in one tap, and — when a class is full — join a **smart waitlist**. The moment a booked member cancels, the system **automatically promotes** the first person in line, confirms their booking and notifies them in real time. Capacity is enforced inside database transactions, so a class can **never** be overbooked — even when many members race for the last seat at the same moment.
 
+> **Live demo:** https://fitbook-green.vercel.app
+> **Backend API:** https://fitbook-production-7bf3d95e.up.railway.app
+> Demo accounts are listed under [Demo credentials](#demo-credentials) below.
+
 ---
 
 ## Features

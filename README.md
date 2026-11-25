@@ -2,6 +2,11 @@
 
 A complete full-stack fitness class booking platform with real-time seat availability and an automatic smart waitlist.
 
+## Live Demo
+
+- **Website:** https://fitbook-green.vercel.app
+- **Backend API:** https://fitbook-production-7bf3d95e.up.railway.app
+
 **The full project lives in the [`fitbook/`](fitbook/) folder** — see [`fitbook/README.md`](fitbook/README.md) for features, setup, demo credentials, API docs and deployment instructions.
 
 - `fitbook/client/` — React + TypeScript + Vite + Tailwind frontend
